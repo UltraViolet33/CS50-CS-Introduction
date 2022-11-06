@@ -48,8 +48,7 @@ int get_cents(void)
     do
     {
         number = get_int("Number : ");
-    }
-    while (number <= 0);
+    } while (number <= 0);
 
     return number;
 }
@@ -68,7 +67,7 @@ int calculate_quarters(int cents)
     return count;
 }
 
-//calculate the dimes
+// calculate the dimes
 int calculate_dimes(int cents)
 {
     int count = 0;
@@ -82,7 +81,7 @@ int calculate_dimes(int cents)
     return count;
 }
 
-//calculate the nickels
+// calculate the nickels
 int calculate_nickels(int cents)
 {
     int count = 0;
@@ -96,7 +95,7 @@ int calculate_nickels(int cents)
     return count;
 }
 
-//calculate the pennies
+// calculate the pennies
 int calculate_pennies(int cents)
 {
     int count = 0;
