@@ -14,7 +14,6 @@ int main(void)
         number = get_int("Height : ");
     } while (number <= 0 || number > 8);
 
-
     for (i = 1; i <= number; i++)
     {
         for (k = i; k < number; k++)
@@ -29,13 +28,11 @@ int main(void)
 
         printf("  ");
 
-         for (l = 0; l < i; l++)
+        for (l = 0; l < i; l++)
         {
             printf("#");
         }
 
-
         printf("\n");
     }
-
 }

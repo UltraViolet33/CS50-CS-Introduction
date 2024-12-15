@@ -35,7 +35,7 @@ int main(int argc, string argv[])
     }
 
     printf("ciphertext: %s\n", text_user);
-    
+
     return 0;
 }
 

@@ -1,5 +1,6 @@
 import cs50 as cs
 
+
 def main():
     cents = 0
     while cents <= 0:
@@ -21,8 +22,6 @@ def main():
     sum_coins = quarters + dimes + nickels + pennies
 
     return sum_coins
-
-
 
 
 def calculate(cents, coins):

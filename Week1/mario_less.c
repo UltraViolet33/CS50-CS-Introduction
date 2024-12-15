@@ -9,14 +9,13 @@ int main(void)
     int j;
     int k;
 
-    //input number
+    // input number
     do
     {
         number = get_int("Height : ");
-    }
-    while (number <= 0 || number > 8);
+    } while (number <= 0 || number > 8);
 
-    //drawing
+    // drawing
     for (i = 1; i <= number; i++)
     {
         for (k = i; k < number; k++)

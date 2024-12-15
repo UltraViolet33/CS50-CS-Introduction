@@ -6,7 +6,6 @@
 #define BLOCK_SIZE 512
 typedef uint8_t BYTE;
 
-
 int is_jpeg(BYTE buffer[]);
 
 int main(int argc, char *argv[])
@@ -26,11 +25,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-
     char filename[8];
     FILE *image;
     int counter = 0;
-
 
     BYTE buffer[BLOCK_SIZE];
 

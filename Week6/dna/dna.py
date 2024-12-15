@@ -17,17 +17,16 @@ def main():
 
     str = []
 
-    with open(csv_file, newline='') as file:
+    with open(csv_file, newline="") as file:
         reader = csv.reader(file)
         for row in reader:
             str.append(row)
-
 
     str = str[0]
     str.pop(0)
 
     txt_file = sys.argv[2]
-    f = open(txt_file, 'r')
+    f = open(txt_file, "r")
     dna_sequence = f.read()
 
     counts_str = {}
@@ -36,15 +35,13 @@ def main():
         match_count = longest_match(dna_sequence, item)
         counts_str[item] = match_count
 
-
     winner = "No match"
 
     for person in people:
         if match_person(person, counts_str):
-            winner = person['name']
+            winner = person["name"]
 
     print(winner)
-
 
 
 def longest_match(sequence, subsequence):
@@ -85,14 +82,11 @@ def longest_match(sequence, subsequence):
     return longest_run
 
 
-
-
 def match_person(person, strs):
     for str in strs:
         if int(person[str]) != strs[str]:
             return False
     return True
-
 
 
 main()

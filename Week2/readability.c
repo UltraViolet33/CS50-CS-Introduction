@@ -109,13 +109,12 @@ int count_char(char *s, char c)
 
     for (int i = 0; i < length; i++)
     {
-         if (s[i] == c)
+        if (s[i] == c)
         {
             count++;
         }
-
     }
-       
+
     return count;
 }
 

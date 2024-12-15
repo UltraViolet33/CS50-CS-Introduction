@@ -1,5 +1,6 @@
 import cs50 as cs
 
+
 def main():
     text = cs.get_string("Text : ")
 
@@ -39,6 +40,7 @@ def count_words(text):
 
     return number_words + 1
 
+
 def count_sentences(text):
     sentences = 0
 
@@ -57,7 +59,7 @@ def count_char(str, c):
     for i in range(len(str)):
         if str[i] == c:
             count += 1
-            
+
     return count
 
 
@@ -65,7 +67,8 @@ def calculate_grade(letters, sentences, words):
     L = 100.000 * letters / words
     S = 100.000 * sentences / words
 
-    f = 0.0588 * L - 0.296 * S -15.8
+    f = 0.0588 * L - 0.296 * S - 15.8
     return int(round(f))
+
 
 main()

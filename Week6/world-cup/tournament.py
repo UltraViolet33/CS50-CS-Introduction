@@ -23,10 +23,9 @@ def main():
         with open(filename) as file:
             reader = csv.DictReader(file)
             for row in reader:
-                teams.append({"team": row["team"], "rating":  int(row["rating"])})
+                teams.append({"team": row["team"], "rating": int(row["rating"])})
     except FileNotFoundError:
         sys.exit(f"Could not read {filename}")
-
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
@@ -71,7 +70,6 @@ def simulate_tournament(teams):
     while len(teams) > 1:
         teams = simulate_round(teams)
     return teams[0]["team"]
-
 
 
 if __name__ == "__main__":

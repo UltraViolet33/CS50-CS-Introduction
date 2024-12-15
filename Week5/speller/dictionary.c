@@ -14,8 +14,7 @@ typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
-}
-node;
+} node;
 void free_node(node *n);
 
 // TODO: Choose number of buckets in hash table
@@ -26,8 +25,6 @@ int word_count = 0;
 // Hash table
 node *table[N];
 
-
-
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -37,12 +34,12 @@ bool check(const char *word)
 
     while (current != NULL)
     {
-        if(strcasecmp(current->word, word) == 0)
+        if (strcasecmp(current->word, word) == 0)
         {
             return true;
         }
 
-         current = current->next;
+        current = current->next;
     }
     return false;
 }
@@ -71,7 +68,7 @@ bool load(const char *dictionary)
     {
         node *tmp = malloc(sizeof(node));
 
-        if(tmp == NULL)
+        if (tmp == NULL)
         {
             return false;
         }
@@ -80,7 +77,7 @@ bool load(const char *dictionary)
 
         int hash_number = hash(word);
 
-        if(table[hash_number] == NULL)
+        if (table[hash_number] == NULL)
         {
             tmp->next = NULL;
         }
@@ -109,7 +106,7 @@ bool unload(void)
 {
     for (int i = 0; i < N; i++)
     {
-        if(table[i] != NULL)
+        if (table[i] != NULL)
         {
             free_node(table[i]);
         }
@@ -119,7 +116,7 @@ bool unload(void)
 
 void free_node(node *n)
 {
-    if(n->next != NULL)
+    if (n->next != NULL)
     {
         free_node(n->next);
     }
